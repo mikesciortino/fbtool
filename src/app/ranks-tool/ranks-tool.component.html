@@ -1,11 +1,14 @@
 <div class="csv-file-chooser-section">
     
-    <input type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
-    accept=".csv" />  <br>
-    <button type="button" (click)="fillRankings()">Fill Rankings</button> <br><br>
+    <input style="display: inline-block;" type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
+    accept=".csv" />
 
-    <p>Enter Draft ID<input type="text" id="draftID" name="draftID" [(ngModel)]="draftID"> &nbsp; <button type="button" (click)="getDraftPicks(draftID)">Get Draft</button></p>
+    <button type="button" (click)="fillRankings()">Fill Rankings</button>
     
+    <p style="float: right;">Enter Draft ID<input  type="text" id="draftID" name="draftID" [(ngModel)]="draftID"> &nbsp; <button type="button" (click)="getDraftPicks(draftID)">Get Draft</button></p>
+    
+    
+  
 
 </div>
 
@@ -23,10 +26,10 @@
     <tbody > 
       <tr *ngFor="let r of ranks;">
         <td [ngClass]="{'red': r.picked == 'yes'}">{{r.rank}}</td>
-        <td>{{r.name}}</td>
-        <td >{{r.team}}</td>
-        <td>{{r.position}}</td>
-        <td >{{r.ecr}}</td>
+        <td [ngClass]="{'green': r.position == 'RB' , 'blue': r.position == 'WR' , 'red': r.position == 'QB' , 'orange': r.position == 'TE' }">{{r.name}}</td>
+        <td [ngClass]="{'green': r.position == 'RB' , 'blue': r.position == 'WR' , 'red': r.position == 'QB' , 'orange': r.position == 'TE' }">{{r.team}}</td>
+        <td [ngClass]="{'green': r.position == 'RB' , 'blue': r.position == 'WR' , 'red': r.position == 'QB' , 'orange': r.position == 'TE' }">{{r.position}}</td>
+        <td>{{r.ecr}}</td>
         <td>{{r.vecr}}</td>
       </tr>
     </tbody>
