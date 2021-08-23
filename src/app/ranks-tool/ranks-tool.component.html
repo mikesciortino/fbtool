@@ -3,7 +3,8 @@
     <input style="display: inline-block;" type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
     accept=".csv" />
 
-    <button type="button" (click)="fillRankings()">Fill Rankings</button>
+    <button type="button" (click)="loadRanks()">Load Rankings</button>
+
     
     <p style="float: right;">Enter Draft ID<input  type="text" id="draftID" name="draftID" [(ngModel)]="draftID"> &nbsp; <button type="button" (click)="getDraftPicks(draftID)">Get Draft</button></p>
     
