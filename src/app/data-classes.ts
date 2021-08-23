@@ -1,5 +1,7 @@
 //Data model classes for the app
 
+import { first } from "rxjs/operators";
+
 //Describe a draft pick
 export class draftPick {
     _id? : string;
@@ -13,8 +15,24 @@ export class draftPick {
     is_keeper: string;
     draft_id: string;
 
+    name: string;
+    ecr: string;
+    vecr: string;
+
 }
 
+export class rankings{
+    rank: number;
+    name: string;
+    team : string;
+    position: string;
+    ecr: string;
+    vecr: string;
+
+    picked: string = 'no';
+}
+    
+    
 export class metadata {
    _id? : string;
    team : string;

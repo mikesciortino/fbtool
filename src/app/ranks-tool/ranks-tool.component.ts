@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { NgxCsvParser } from 'ngx-csv-parser';
 import { NgxCSVParserError } from 'ngx-csv-parser';
+import { DataManagerService } from "../data-manager.service";
+import { draftPick, rankings } from "../data-classes";
+import { ThisReceiver } from '@angular/compiler';
 
 @Component({
   selector: 'app-ranks-tool',
@@ -10,10 +13,19 @@ import { NgxCSVParserError } from 'ngx-csv-parser';
 })
 export class RanksToolComponent {
 
+  // Properties for the class
+  picks: draftPick[];
+  
+  ranks: rankings[] = [];
+  draftID: string;
+  i: number = 0;
+  j: number = 0;
+  
   csvRecords: any[] = [];
   header = true;
 
-  constructor(private ngxCsvParser: NgxCsvParser) { }
+
+  constructor(private ngxCsvParser: NgxCsvParser, private m: DataManagerService) { }
   
   @ViewChild('fileImportInput', { static: true }) fileImportInput: any;
 
@@ -32,7 +44,32 @@ export class RanksToolComponent {
       }, (error: NgxCSVParserError) => {
         console.log('Error', error);
       });
-  
+
+    }
+
+    getDraftPicks(draftID){
+      this.m.getDraftPicks(draftID).subscribe(response => this.picks = response);
+    }
+
+    fillRankings(){
+      for(this.i = 0;this.i<this.csvRecords.length;this.i++){
+        this.ranks[this.i] = this.csvRecords[this.i];
+        //this.ranks[this.i].rank=this.csvRecords[this.i].rank;
+        this.ranks[this.i].name = this.csvRecords[this.i].playerName;
+        //this.ranks[this.i].team = this.csvRecords[this.i].team;
+        //this.ranks[this.i].position = this.csvRecords[this.i].position;
+        //this.ranks[this.i].ecr = this.csvRecords[this.i].ecr;
+        this.ranks[this.i].vecr = this.csvRecords[this.i].vECR;
+      }
+      for(this.i = 0;this.i<this.ranks.length;this.i++){
+        for(this.j = 0;this.j<this.picks.length;this.j++){
+          if(this.ranks[this.i].name == (this.picks[this.j].metadata.first_name + ' ' + this.picks[this.j].metadata.last_name)){
+            this.ranks[this.i].picked = 'yes';
+          }
+        } 
+      }
+
+
     }
 
 

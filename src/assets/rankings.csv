@@ -20,7 +20,7 @@ rank,playerName,team,position,ecr,vECR
 19,J.K. Dobbins,BAL,RB,30,11
 20,DeAndre Hopkins,ARI,WR,16,-4
 21,Clyde Edwards-Helaire,KC,RB,25,4
-22,D.K. Metcalf,SEA,WR,19,-3
+22,DK Metcalf,SEA,WR,19,-3
 23,Keenan Allen,LAC,WR,23,0
 24,A.J. Brown,TEN,WR,20,-4
 25,Justin Jefferson,MIN,WR,22,-3
@@ -28,7 +28,7 @@ rank,playerName,team,position,ecr,vECR
 27,Chris Carson,SEA,RB,31,4
 28,D'Andre Swift,DET,RB,32,4
 29,David Montgomery,CHI,RB,33,4
-30,Allen Robinson II,CHI,WR,26,-4
+30,Allen Robinson,CHI,WR,26,-4
 31,Terry McLaurin,WAS,WR,27,-4
 32,CeeDee Lamb,DAL,WR,29,-3
 33,Amari Cooper,DAL,WR,38,5
@@ -52,7 +52,7 @@ rank,playerName,team,position,ecr,vECR
 51,Josh Jacobs,LV,RB,43,-8
 52,T.J. Hockenson,DET,TE,55,3
 53,Kyle Pitts,ATL,TE,56,3
-54,Patrick Mahomes II,KC,QB,28,-26
+54,Patrick Mahomes,KC,QB,28,-26
 55,Kyler Murray,ARI,QB,51,-4
 56,Josh Allen,BUF,QB,42,-14
 57,Lamar Jackson,BAL,QB,57,0
@@ -69,7 +69,7 @@ rank,playerName,team,position,ecr,vECR
 68,Courtland Sutton,DEN,WR,77,9
 69,Russell Wilson,SEA,QB,67,-2
 70,Chase Claypool,PIT,WR,71,1
-71,Odell Beckham Jr.,CLE,WR,66,-5
+71,Odell Beckham,CLE,WR,66,-5
 72,Aaron Rodgers,GB,QB,70,-2
 73,DeVonta Smith,PHI,WR,100,27
 74,Robert Tonyan,GB,TE,97,23
@@ -80,10 +80,10 @@ rank,playerName,team,position,ecr,vECR
 79,Michael Gallup,DAL,WR,116,37
 80,Gus Edwards,BAL,RB,101,21
 81,Jaylen Waddle,MIA,WR,127,46
-82,Laviska Shenault Jr.,JAC,WR,110,28
+82,Laviska Shenault,JAC,WR,110,28
 83,JuJu Smith-Schuster,PIT,WR,78,-5
 84,Jarvis Landry,CLE,WR,106,22
-85,Melvin Gordon III,DEN,RB,72,-13
+85,Melvin Gordon,DEN,RB,72,-13
 86,Tom Brady,TB,QB,86,0
 87,Myles Gaskin,MIA,RB,53,-34
 88,Zack Moss,BUF,RB,85,-3
@@ -91,7 +91,7 @@ rank,playerName,team,position,ecr,vECR
 90,Ryan Tannehill,TEN,QB,84,-6
 91,Tyler Boyd,CIN,WR,82,-9
 92,AJ Dillon,GB,RB,99,7
-93,Will Fuller V,MIA,WR,96,3
+93,Will Fuller,MIA,WR,96,3
 94,Jalen Hurts,PHI,QB,98,4
 95,Mike Williams,LAC,WR,114,19
 96,Marvin Jones Jr.,JAC,WR,122,26
@@ -119,7 +119,7 @@ rank,playerName,team,position,ecr,vECR
 118,Brandin Cooks,HOU,WR,88,-30
 119,Kirk Cousins,MIN,QB,134,15
 120,Leonard Fournette,TB,RB,87,-33
-121,Ronald Jones II,TB,RB,74,-47
+121,Ronald Jones,TB,RB,74,-47
 122,James Conner,ARI,RB,83,-39
 123,Elijah Moore,NYJ,WR,155,32
 124,Michael Thomas,NO,WR,118,-6
