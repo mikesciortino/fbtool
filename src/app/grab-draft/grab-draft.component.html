@@ -1,7 +1,9 @@
-
-<p>Enter Draft ID<input type="text" id="draftID" name="draftID" [(ngModel)]="draftID"></p>
+<div style="padding-left: 10px;"> 
+  <p>Enter Draft ID<input type="text" id="draftID" name="draftID" [(ngModel)]="draftID"></p>
 
 <button type="button" (click)="getDraftPicks(draftID)">Get Draft</button>
+
+</div>
 
 <table class="table table-striped">
   <thead>
@@ -15,7 +17,9 @@
   </thead>
   <tbody>
     <tr *ngFor="let p of picks">
-      <td [ngClass]="{'green': p.metadata.position == 'RB' , 'blue': p.metadata.position == 'WR' , 'red': p.metadata.position == 'QB' , 'orange': p.metadata.position == 'TE' }">{{ p.round }}</td>
+      <td [ngClass]="{'green': p.metadata.position == 'RB' , 'blue': p.metadata.position == 'WR' , 'red': p.metadata.position == 'QB' , 'orange': p.metadata.position == 'TE' }">{{ p.round }}
+        
+      </td>
       <td [ngClass]="{'green': p.metadata.position == 'RB' , 'blue': p.metadata.position == 'WR' , 'red': p.metadata.position == 'QB' , 'orange': p.metadata.position == 'TE' }">{{ p.pick_no }}</td>
       <td [ngClass]="{'green': p.metadata.position == 'RB' , 'blue': p.metadata.position == 'WR' , 'red': p.metadata.position == 'QB' , 'orange': p.metadata.position == 'TE' }">{{ p.metadata.first_name + " " + p.metadata.last_name}}</td>
       <td [ngClass]="{'green': p.metadata.position == 'RB' , 'blue': p.metadata.position == 'WR' , 'red': p.metadata.position == 'QB' , 'orange': p.metadata.position == 'TE' }">{{ p.metadata.position}} </td>     

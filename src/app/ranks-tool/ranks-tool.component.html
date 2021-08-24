@@ -1,16 +1,23 @@
-<div class="csv-file-chooser-section">
+<style>
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+</style>
+
+<div class="sticky">
+  <div class="csv-file-chooser-section">
     
     <input style="display: inline-block;" type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
     accept=".csv" />
-
     <button type="button" (click)="loadRanks()">Load Rankings</button>
-
-    
     <p style="float: right;">Enter Draft ID<input  type="text" id="draftID" name="draftID" [(ngModel)]="draftID"> &nbsp; <button type="button" (click)="getDraftPicks(draftID)">Get Draft</button></p>
     
-    
-  
-
+  </div>
 </div>
 
   <table class="table table-striped">
@@ -26,7 +33,7 @@
     </thead>
     <tbody > 
       <tr *ngFor="let r of ranks;">
-        <td [ngClass]="{'red': r.picked == 'yes'}">{{r.rank}}</td>
+        <td onclick="if(this.style.background == 'red' ){javascript:this.style.background = 'white';} else {javascript:this.style.background = 'red';} " [ngClass]="{'red': r.picked == 'yes'}" >{{r.rank}}</td>
         <td [ngClass]="{'green': r.position == 'RB' , 'blue': r.position == 'WR' , 'red': r.position == 'QB' , 'orange': r.position == 'TE' }">{{r.name}}</td>
         <td [ngClass]="{'green': r.position == 'RB' , 'blue': r.position == 'WR' , 'red': r.position == 'QB' , 'orange': r.position == 'TE' }">{{r.team}}</td>
         <td [ngClass]="{'green': r.position == 'RB' , 'blue': r.position == 'WR' , 'red': r.position == 'QB' , 'orange': r.position == 'TE' }">{{r.position}}</td>

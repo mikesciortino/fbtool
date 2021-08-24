@@ -23,8 +23,12 @@ export class RanksToolComponent {
   
   csvRecords: any[] = [];
   header = true;
+  toggle = true;
+  myButton: any;
 
   draftID1 : string;
+
+  $: any;
 
   constructor(private ngxCsvParser: NgxCsvParser, private m: DataManagerService) { }
   
@@ -84,5 +88,6 @@ export class RanksToolComponent {
       } 
     }
   }
+
 
 }
