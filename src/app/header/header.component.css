@@ -1,5 +1,6 @@
 .header{
-    background-color: #ccc; 
+    background-color: slategray;
     padding: 5px 20px 15px 30px;
-    color: blue;
+    color: black;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
