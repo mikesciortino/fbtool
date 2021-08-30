@@ -14,7 +14,9 @@
     
     <input style="display: inline-block;" type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener($event)"
     accept=".csv" />
-    <button type="button" (click)="loadRanks()">Load Rankings</button>
+    <button type="button" (click)="loadRanks()">Load Rankings</button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="text" [(ngModel)]="term" class="searchTerm" placeholder="Search">
+    
     <p style="float: right;">Enter Draft ID<input  type="text" id="draftID" name="draftID" [(ngModel)]="draftID"> &nbsp; <button type="button" (click)="getDraftPicks(draftID)">Get Draft</button></p>
     
   </div>
@@ -32,7 +34,7 @@
       </tr>
     </thead>
     <tbody > 
-      <tr *ngFor="let r of ranks;">
+      <tr *ngFor="let r of ranks | filter:term">
         <td [ngClass]="{'red': r.picked == 'yes'}" onclick="if(this.style.background == 'red' ){javascript:this.style.background = 'white';} else {javascript:this.style.background = 'red';}"  >{{r.rank}}</td>
         <td [ngClass]="{'green': r.position == 'RB' , 'blue': r.position == 'WR' , 'red': r.position == 'QB' , 'orange': r.position == 'TE' }">{{r.name}}</td>
         <td [ngClass]="{'green': r.position == 'RB' , 'blue': r.position == 'WR' , 'red': r.position == 'QB' , 'orange': r.position == 'TE' }">{{r.team}}</td>

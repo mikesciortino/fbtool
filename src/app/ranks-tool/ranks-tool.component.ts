@@ -25,6 +25,8 @@ export class RanksToolComponent {
   header = true;
   toggle = true;
   myButton: any;
+  term: string;
+  searchTerm: string;
 
   draftID1 : string;
 

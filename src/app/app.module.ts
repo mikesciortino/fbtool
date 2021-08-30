@@ -12,6 +12,8 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { GrabDraftComponent } from './grab-draft/grab-draft.component';
 import { RanksToolComponent } from './ranks-tool/ranks-tool.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+
 
 
 @NgModule({
@@ -24,13 +26,14 @@ import { RanksToolComponent } from './ranks-tool/ranks-tool.component';
     PageNotFoundComponent,
     GrabDraftComponent,
     RanksToolComponent
-
+  
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
